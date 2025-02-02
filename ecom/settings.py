@@ -86,17 +86,29 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 pymysql.install_as_MySQLdb()
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'railway',               # Replace with your database name
+#         'USER': 'root',                        # Replace with your MySQL username
+#         # 'PASSWORD': os.environ(["DB_PASSWORD_YD"]), # Replace with your MySQL password
+#         'PASSWORD': "qDYJCdMWHRENQthNqYTGEekwJkaiYfSO", # Replace with your MySQL password
+#         'HOST': 'mysql.railway.internal',               # Use the hostname or IP address of your MySQL server
+#         'PORT': '3306',                    # Default MySQL port
+#      }
+#     }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'railway',               # Replace with your database name
-        'USER': 'root',                        # Replace with your MySQL username
+        'NAME': 'if0_37038790_blog',               # Replace with your database name
+        'USER': 'if0_37038790',                        # Replace with your MySQL username
         # 'PASSWORD': os.environ(["DB_PASSWORD_YD"]), # Replace with your MySQL password
-        'PASSWORD': "qDYJCdMWHRENQthNqYTGEekwJkaiYfSO", # Replace with your MySQL password
-        'HOST': 'mysql.railway.internal',               # Use the hostname or IP address of your MySQL server
+        'PASSWORD': os.environ(["DB_PASSWORD_YD"]), # Replace with your MySQL password
+        'HOST': 'sql200.infinityfree.com',               # Use the hostname or IP address of your MySQL server
         'PORT': '3306',                    # Default MySQL port
-  }
-}
+     }
+    }
 
 
 # Password validation
