@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-&xejxo*3240j#6jqcunfwnu6*3e7^s3=lin!+5scy%mc=f9^-v
 DEBUG = True
 
 ALLOWED_HOSTS = ['ecomerce-django-production.up.railway.app','https://ecomerce-django-production.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ['ecomerce-django-production.up.railway.app','https://ecomerce-django-production.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://ecomerce-django-production.up.railway.app']
 
 
 # Application definition
@@ -87,13 +87,13 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ecommerce',               # Replace with your database name
+        'NAME': 'railway',               # Replace with your database name
         'USER': 'root',                        # Replace with your MySQL username
-        'PASSWORD': '', # Replace with your MySQL password
-        'HOST': 'localhost',               # Use the hostname or IP address of your MySQL server
-        'PORT': '3307',                    # Default MySQL port
+        'PASSWORD': os.environ(["DB_PASSWORD_YD"]), # Replace with your MySQL password
+        'HOST': 'mysql.railway.internal',               # Use the hostname or IP address of your MySQL server
+        'PORT': '3306',                    # Default MySQL port
         'OPTIONS': {
-        'sql_mode': 'STRICT_TRANS_TABLES',
+        # 'sql_mode': 'STRICT_TRANS_TABLES',
     }
   }
 }
