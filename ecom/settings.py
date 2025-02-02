@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 import pymysql
-pymysql.install_as_MySQLdb()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -86,18 +85,16 @@ WSGI_APPLICATION = 'ecom.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'railway',               # Replace with your database name
         'USER': 'root',                        # Replace with your MySQL username
         # 'PASSWORD': os.environ(["DB_PASSWORD_YD"]), # Replace with your MySQL password
-        'PASSWORD': "ATLXEDvtFEiLOpnXrTeWtBUzTCssPZBa", # Replace with your MySQL password
+        'PASSWORD': "qDYJCdMWHRENQthNqYTGEekwJkaiYfSO", # Replace with your MySQL password
         'HOST': 'mysql.railway.internal',               # Use the hostname or IP address of your MySQL server
         'PORT': '3306',                    # Default MySQL port
-        'OPTIONS': {
-        # 'sql_mode': 'STRICT_TRANS_TABLES',
-    }
   }
 }
 
