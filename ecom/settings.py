@@ -108,8 +108,8 @@ DATABASES = {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "railway",  # Replace with your database name
         "USER": "root",  # Replace with your MySQL username
-        "PASSWORD": "YpvoHBVhoYgiIrMQDxNzjmUjmUNgqwqX",  # Replace with your MySQL password
-        "HOST": "mysql.railway.internal",  # Use the hostname or IP address of your MySQL server
+        "PASSWORD": "cPHXRxVJzgfsMuhjhjIyLpPafLffojkV",  # Replace with your MySQL password
+        "HOST": "mysql-581d024e.railway.internal",  # Use the hostname or IP address of your MySQL server
         "PORT": "3306",  # Default MySQL port
     }
 }
