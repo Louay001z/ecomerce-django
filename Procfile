@@ -1,2 +1,1 @@
-web: gunicorn store.wsgi --log-file
-web: python manage.py migrate && gunicorn store.wsg
+web: python manage.py collectstatic --noinput && python manage.py migrate && python manage.py runserver 0.0.0.0:8080

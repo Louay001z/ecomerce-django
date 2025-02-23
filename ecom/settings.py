@@ -98,17 +98,21 @@ pymysql.install_as_MySQLdb()
 #      }
 #     }
 
+print(f"{os.environ.get('MYSQL_DATABASE')=}")
+print(f"{os.environ.get('MYSQLPASSWORD')=}")
+print(f"{os.environ.get('MYSQLPORT')=}")
+print(f"{os.environ.get('MYSQLUSER')=}")
+print(f"{os.environ.get('MYSQLPASSWORD')=}")
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'if0_37038790_blog',               # Replace with your database name
-        'USER': 'if0_37038790',                        # Replace with your MySQL username
-        # 'PASSWORD': os.environ(["DB_PASSWORD_YD"]), # Replace with your MySQL password
-        'PASSWORD': os.environ(["DB_PASSWORD_YD"]), # Replace with your MySQL password
-        'HOST': 'sql200.infinityfree.com',               # Use the hostname or IP address of your MySQL server
-        'PORT': '3306',                    # Default MySQL port
-     }
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "railway",  # Replace with your database name
+        "USER": "root",  # Replace with your MySQL username
+        "PASSWORD": "cPHXRxVJzgfsMuhjhjIyLpPafLffojkV",  # Replace with your MySQL password
+        "HOST": "mysql-581d024e.railway.internal",  # Use the hostname or IP address of your MySQL server
+        "PORT": "3306",  # Default MySQL port
     }
+}
 
 
 # Password validation
