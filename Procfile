@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn ecomerce-django.wsgi && gunicorn ecomerce-django.wsgi --log-file -
+web: python manage.py migrate && python manage.py runserver 0.0.0.0:8080 --log-file -
